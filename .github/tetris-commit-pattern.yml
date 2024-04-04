@@ -2,7 +2,7 @@ name: Tetris Commit Pattern
 
 on:
   schedule:
-    - cron: '0 10,12,16,20 * * *'
+    - cron: '0 10,12,16,20 * * 1-5'
 
 jobs:
   commit-pattern:
@@ -27,8 +27,12 @@ jobs:
 
     - name: Commit changes
       run: |
-        git config --global user.name 'GitHub Actions'
-        git config --global user.email 'actions@github.com'
+        git config --global user.name 'wekesa360'
+        git config --global user.email 'wekesa360@outlook.com'
         git add commit.txt
         git commit -m "Tetris commit pattern on $(date +'%Y-%m-%d')"
-        git push
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.G_TOKEN }}
+        branch: main
