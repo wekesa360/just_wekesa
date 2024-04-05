@@ -2,7 +2,7 @@ name: Tetris Commit Pattern
 
 on:
   schedule:
-    - cron: '0 10,12,16,20 * * 1-5'
+    - cron: '0 10,12,16,20 * * *'
 
 jobs:
   commit-pattern:
