@@ -17,5 +17,5 @@ else:
 with open("commit.txt", "w") as file:
     file.write(commit_content)
 
-os.system("git add commit.txt")
-os.system(f"git commit -m 'Commit on day {day_of_year}'")
+# os.system("git add commit.txt")
+# os.system(f"git commit -m 'Commit on day {day_of_year}'")
